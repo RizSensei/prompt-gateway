@@ -1,2 +1,3 @@
-export declare class AiModule {
-}
+export let AiModule: {
+    new (): {};
+};

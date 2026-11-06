@@ -1,4 +1,4 @@
-export declare const ObserveModule: {
+export const ObserveModule: {
     new (httpAdapterHost: import("@nestjs/core").HttpAdapterHost, asyncLocalStorage: import("async_hooks").AsyncLocalStorage<Map<string, any>>, options: import("@nestjs/observe").ObserveModuleOptionsWithDefaults): {
         readonly logger: import("@nestjs/common").Logger;
         readonly httpAdapterHost: import("@nestjs/core").HttpAdapterHost;
@@ -9,8 +9,10 @@ export declare const ObserveModule: {
     forRootAsync(options: import("@nestjs/observe").ObserveModuleAsyncOptions): import("@nestjs/common").DynamicModule;
     createAsyncProviders(asyncOptions: import("@nestjs/observe").ObserveModuleAsyncOptions): import("@nestjs/common").Provider[];
     createAsyncOptionsProvider(asyncOptions: import("@nestjs/observe").ObserveModuleAsyncOptions): import("@nestjs/common").Provider;
-}, ObserveInstrument: {
+};
+export const ObserveInstrument: {
     instanceDecorator: (instance: unknown) => unknown;
 } | undefined;
-export declare class AppModule {
-}
+export let AppModule: {
+    new (): {};
+};

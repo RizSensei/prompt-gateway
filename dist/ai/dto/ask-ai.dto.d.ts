@@ -1,5 +1,2 @@
-export declare class AskAiDto {
-    question: string;
-    detailLevel?: number;
-    language?: string;
+export class AskAiDto {
 }

@@ -1,3 +1,5 @@
-export declare class AppService {
-    getHello(): string;
-}
+export let AppService: {
+    new (): {
+        getHello(): string;
+    };
+};

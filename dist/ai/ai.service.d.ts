@@ -1,15 +1,16 @@
-import { ConfigService } from '@nestjs/config';
-import { AskAiDto } from './dto/ask-ai.dto.js';
-export declare class AiService {
-    private readonly config;
-    private readonly ai;
-    private readonly model;
-    private readonly logger;
-    constructor(config: ConfigService);
-    ask(dto: AskAiDto): Promise<{
-        question: string;
-        detailLevel: number;
-        language: string;
-        answer: string | undefined;
-    }>;
-}
+export let AiService: {
+    new (config: any): {
+        config: any;
+        ai: GoogleGenAI;
+        model: any;
+        logger: Logger;
+        ask(dto: any): Promise<{
+            question: any;
+            detailLevel: any;
+            language: any;
+            answer: string | undefined;
+        }>;
+    };
+};
+import { GoogleGenAI } from '@google/genai';
+import { Logger } from '@nestjs/common';
